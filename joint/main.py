@@ -1,3 +1,17 @@
+# ------------------------------------------------------------------------------
+# MLERE: Multi-dimensional Logical Reasoning for Event Relation Extraction
+# 
+# This file contains the model implementation for MLERE.
+# 
+# Acknowledgement:
+# Part of the code structure (e.g., EventEncoder and data processing utilities) 
+# is adapted from the MAVEN-ERE official baseline:
+# Repository: https://github.com/THU-KEG/MAVEN-ERE
+# 
+# We have extended the original model with:
+# 1. Multi-dimensional Clues Discovery (Event-Centric Heterogeneous Graph).
+# 2. Constraint-Guided Reasoning module with learnable logic rules.
+# ------------------------------------------------------------------------------
 from src.model import Model
 from src.utils import to_cuda, to_var
 import torch
@@ -400,4 +414,5 @@ if __name__ == "__main__":
             subevent_dump("../data/MAVEN_ERE/test.jsonl", all_preds, dump_results)
     with open(os.path.join(output_dir, "test_prediction.jsonl"), "w")as f:
         f.writelines("\n".join([json.dumps(dump_results[key]) for key in dump_results]))
+
     sys.stdout.close()
