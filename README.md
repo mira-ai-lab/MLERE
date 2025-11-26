@@ -55,9 +55,4 @@ python temporal/main.py \
 ```
 
 Note: If you only want to perform inference (evaluation), add the `--eval_only` flag to the commands above and specify the checkpoint path using `--load_ckpt`.
-
-## 📑Citation
-
-If you use the MLERE framework or this code in your research, please cite our paper:
-
  
