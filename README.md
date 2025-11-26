@@ -1,4 +1,4 @@
-# MLERE
+# Multi-dimensional Logical Reasoning for Event Relation Extraction
 
 This repository is the official implementation of the paper **"Multi-dimensional Logical Reasoning for Event Relation Extraction"**.
 
